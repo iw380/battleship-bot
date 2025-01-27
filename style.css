@@ -1,0 +1,126 @@
+/* Reset default styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: silver;  /* Change color to white */
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: white;  /* Change color to white */
+}
+
+p1 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: white;  /* Change color to white */
+}
+
+/* Style for the body */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: black;
+    flex-direction: column;
+}
+
+/* Styling for the grid container */
+.grid-container {
+    display: flex;
+    gap: 50px;  /* Space between the grids */
+    justify-content: center; /* Align grids in the center */
+    width: 100%;  /* Ensure the container takes full width */
+    max-width: 1200px;  /* Limit the container width */
+}
+
+/* Grid wrapper to hold grid and button */
+.grid-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Style individual grids */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(10, 50px);  /* 10 equal columns */
+    grid-template-rows: repeat(10, 50px);     /* 10 equal rows */
+    gap: 2px;  /* Small gap between cells */
+    margin: 20px auto;
+    position: relative;
+    width: 520px; /* Fixed width for the grid */
+    height: 520px; /* Fixed height for the grid */
+}
+
+/* Style individual cells */
+.cell {
+    background-color: black;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-family: Arial, sans-serif;
+    border: 2px solid darkcyan;  /* Green border lines */
+    cursor: pointer;
+}
+
+/* Hover effect for cells */
+.cell:hover {
+    background-color: #333;
+}
+
+/* Styles for hit and miss */
+.hit {
+    color: orangered;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.miss {
+    color: cyan;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/* Button style */
+button {
+    margin-top: 20px; /* Space between the grid and button */
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: darkcyan;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #008b8b;
+}
+
+.cell.ship-cell {
+    background-color: darkgray;  /* Indicate where the ship is */
+    border: none;                /* Remove the border */
+}
+
+.cell.selected {
+    border: 2px solid yellow; /* Highlight selected cell */
+  }
+
+.cell.sunk {
+    background-color: #444; /* Slightly darker color for sunk ships */
+  }

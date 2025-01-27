@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battleship</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Battleship Bot</h1>
+    <!-- Wrap the two grids inside a container with a flex layout -->
+    <div class="grid-container">
+        <!-- User Grid -->
+        <div class="grid-wrapper">
+            <h2>User's Grid</h2>
+            <div id="userGrid" class="grid"></div>
+            <p1 id="userText"> Place your ships by clicking and dragging!</p1>
+
+            <button id="userButton">Show Probability Heatmap</button>
+        </div>
+        
+        <!-- Bot Grid -->
+        <div class="grid-wrapper">
+            <h2>Bot's Grid</h2>
+            <div id="botGrid" class="grid"></div>
+            <p1 id="botText">Ship lengths: 5,4,3,3,2</p1>
+            <button id="botButton">Attack</button>
+        </div>
+    </div>
+    
+    <script src="index2.js"></script>
+</body>
+</html>
